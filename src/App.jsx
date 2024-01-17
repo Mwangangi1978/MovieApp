@@ -41,11 +41,11 @@ function App() {
         <Header />
         <SearchBox value={title} onChange={handleChange} onClick={handleSearch}/>
         {movies?.length > 0 ?(
-          <>
+          <div className='container'>
             {movies.map((movie)=>(
-              <CardGrid key={movie.imdbId} poster={movie.Poster} title={movie.Title} year={movie.Type}/>
+              <CardGrid key={movie.imdbId} poster={movie.Poster} title={movie.Title} type={movie.Type} year={movie.Year}/>
             ))}
-          </>
+          </div>
           ) : (
           <div className='empty'>
             <h2>No movies found</h2>

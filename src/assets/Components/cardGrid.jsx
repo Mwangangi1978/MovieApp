@@ -1,16 +1,15 @@
 const cardGrid =(props)=>{
     return(
-        <div className="container">
-            <div>
-                <div className="card">
-                    <div class="wrapper">
-                        <img src={props.poster !== "N/A" ? props.poster : "https://via.placeholder.com/400"} class="cover-image" />
-                    </div>
-                    <p  class="title">{props.title}</p> 
-                    {props.type && <p  class="character"> {props.type}</p> }
+        <>
+            <div className="card">
+                <div className="wrapper">
+                    <img src={props.poster !== "N/A" ? props.poster : "https://via.placeholder.com/400"} class="cover-image" alt="Movie Title"/>
                 </div>
-            </div>
-        </div>
+                <p  className="title">{props.title}</p> 
+                {props.type && <p  className="character"> {props.type}</p> }
+                {props.year && <p  className="year"> {props.year}</p> }
+            </div>    
+        </>
     )
 }
 

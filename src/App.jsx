@@ -6,7 +6,7 @@ import CardGrid from './assets/Components/cardGrid'
 import { Flex } from '@chakra-ui/react'
 
 
-const API_URL = 'http://www.omdbapi.com?apikey=813042b1' 
+
 
 function App() {
 
@@ -14,7 +14,7 @@ function App() {
   const [movies, setMovies] = useState([])
 
   const searchMovies = async (title)=>{
-    const response = await fetch (`${API_URL}&s=${title} `)
+    const response = await fetch (`${import.meta.env.VITE_API_URL}&s=${title} `)
     const data = await response.json();
     setMovies(data.Search)
     console.log(data.Search)
@@ -37,7 +37,7 @@ function App() {
    
   return (
     <>
-      <Flex direction="column" className='page-background' >
+      <Flex direction="column" className='page-background' align={'center'} >
         <Header />
         <SearchBox value={title} onChange={handleChange} onClick={handleSearch}/>
         {movies?.length > 0 ?(

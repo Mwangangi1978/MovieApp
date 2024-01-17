@@ -7,7 +7,7 @@ const Header =()=>{
                 marginBottom: '10px',
                 borderBottom: '2px',
                 borderColor: '#725BFF',
-                width: '100vw',
+                
             }}
         >
            <Text className="head"> Mwangangi Movies</Text>

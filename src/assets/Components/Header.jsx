@@ -10,7 +10,7 @@ const Header =()=>{
                 
             }}
         >
-           <Text className="head"> Mwangangi Movies</Text>
+           <Text className="head" color={'rgba(249, 211, 180, 1)'}> Mwangangi Movies</Text>
         </Box>
     )
 }
